@@ -1,0 +1,300 @@
+/* MAIN WRAPPER */
+
+.rbis-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+
+.rbis-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 280px;
+    height: 100vh;
+
+    background: #002b7f;
+    color: white;
+
+    overflow-y: auto;
+
+    z-index: 1000;
+}
+
+/* LOGO */
+
+.sidebar-logo {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+/* MENU */
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    width: 100%;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: white;
+    text-decoration: none;
+
+    padding: 18px 25px;
+
+    transition: .2s;
+}
+
+.sidebar-menu li a:hover {
+    background: rgba(255,255,255,.08);
+}
+
+/* MAIN */
+
+.rbis-main {
+    margin-left: 280px;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+/* TOPBAR */
+
+.rbis-topbar {
+    height: 70px;
+    background: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 25px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+/* CONTENT */
+
+.rbis-content {
+    padding: 20px;
+}
+
+/* USER */
+
+.user-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #222;
+}
+
+.user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* BODY */
+
+body {
+    margin: 0;
+    background: #eef2f6;
+    font-family: Arial, sans-serif;
+}
+
+/* DASHBOARD */
+
+.dashboard-page {
+    padding: 10px;
+}
+
+.dashboard-filter-card {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.dashboard-tabs {
+    display: flex;
+    gap: 40px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 25px;
+}
+
+.dashboard-tabs div {
+    padding-bottom: 12px;
+    font-weight: 600;
+    color: #7a869a;
+}
+
+.dashboard-tabs .active-tab {
+    color: #2f80ed;
+    border-bottom: 3px solid #2f80ed;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.filter-button-wrapper {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.filter-btn {
+    width: 200px;
+    height: 52px;
+    font-weight: 600;
+}
+
+.dashboard-top-grid,
+.dashboard-bottom-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.card-title {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#roadImportanceChart,
+#surfaceChart {
+    padding: 20px;
+}
+
+.stats-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stats-card {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    min-height: 140px;
+}
+
+.stats-icon {
+    width: 85px;
+    height: 85px;
+    background: #2f80ed;
+    color: white;
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 42px;
+}
+
+.stats-content h2,
+.stats-right h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.stats-content p,
+.stats-right p {
+    margin: 0;
+    color: #8b97a8;
+    margin-top: 5px;
+}
+
+.condition-list {
+    padding: 20px;
+}
+
+.condition-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.condition-item:last-child {
+    border-bottom: none;
+}
+
+.condition-chart {
+    width: 140px;
+    flex-shrink: 0;
+}
+
+.condition-info {
+    flex: 1;
+}
+
+.condition-info h4 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f2d3d;
+}
+
+.condition-info p {
+    margin-top: 10px;
+    font-size: 22px;
+    color: #6b778c;
+}
+
+.stats-content,
+.stats-right {
+    flex: 1;
+}
+
+.stats-right {
+    text-align: right;
+}
